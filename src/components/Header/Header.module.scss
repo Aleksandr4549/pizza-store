@@ -1,0 +1,51 @@
+$orange-color: rgb(255, 105, 0);
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+
+  div {
+    display: flex;
+  }
+
+  img {
+    padding-right: 1rem;
+  }
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.cart__btn {
+  display: flex;
+  justify-content: space-between;
+  padding: .1rem .3rem;
+  width: 8rem;
+  border: 1px solid #000;
+  border-radius: 20px;
+  color: #fff;
+  background-color: lighten($orange-color, 10%);
+
+  & div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-left: 2px solid #fff;
+  }
+
+  & .cart__icon {
+    border-left: none;
+  }
+
+  &:hover {
+    background-color: $orange-color;
+  }
+}
+
+a {
+  text-decoration: none;
+}

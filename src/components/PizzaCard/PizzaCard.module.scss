@@ -1,0 +1,99 @@
+$btn-color: rgb(255, 105, 0);
+$margin-bottom: 1rem;
+
+.wrapper {
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
+  width: 25%;
+  cursor: default;
+
+  @media screen and (max-width: 730px) {
+    width: 33.33%;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  } 
+}
+
+.card {
+  display: flex;
+  flex-direction:  column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+
+  & .description__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50%;
+  }
+
+  h3 {
+    margin-bottom: $margin-bottom;
+  }
+
+  & .img__container {
+    margin: 0 auto;
+
+    & img {
+      margin-bottom: $margin-bottom;
+      max-width: 100%;
+    }
+  }
+
+  .description {
+    margin-bottom: $margin-bottom;
+    color: rgba(0, 0, 0, .8)
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    & button {
+      padding: .4rem .8rem;
+      background-color: transparent;
+      border: 1px solid $btn-color;
+      border-radius: .2rem;
+      outline: none;
+      cursor: pointer;
+      transition: .2s linear all;
+
+      &:hover {
+        color: #fff;
+        background-color: $btn-color;
+      }
+    }
+  }
+}
+
+.cards__container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  &::after {
+    content: '';
+    flex: auto;
+  }
+}
+
+.loader__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

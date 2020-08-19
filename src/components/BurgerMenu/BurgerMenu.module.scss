@@ -1,0 +1,35 @@
+$grey-color: #282828;
+
+.burger__menu__list {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  background-color: #fff;
+  position: absolute;
+  left: -.4rem;
+  overflow: hidden;
+}
+
+.burger__menu__item {
+  padding: 1.2rem .4rem;
+  background-color: #fff;
+  border-radius: .3rem;
+  list-style: none;
+  cursor: pointer;
+  transition: .3s all linear;
+
+  &:hover {
+    color: #fff;
+    background-color: lighten($grey-color, 10%);
+  }
+}
+
+.active {
+  padding: 1.2rem .4rem;
+  background-color: lighten($grey-color, 10%);
+  border-radius: .3rem;
+  list-style: none;
+  cursor: pointer;
+  transition: .3s all linear;
+  color: #fff;
+}
